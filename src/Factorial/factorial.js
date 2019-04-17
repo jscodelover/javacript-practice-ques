@@ -10,6 +10,7 @@
  */
 
 function factorial(num) {
+  if (num < 0) return "factorail of negative number can't be found";
   let result = 1;
   for (let i = 1; i <= num; i++) result *= i;
   return result;
@@ -21,8 +22,9 @@ function factorial(num) {
  *
  */
 function factorialRecursive(num) {
+  if (num < 0) return "factorail of negative number can't be found";
   if (num <= 1) return 1;
-  return factorialRecursive(num * num - 1);
+  return num * factorialRecursive(num - 1);
 }
 
 module.exports = {
