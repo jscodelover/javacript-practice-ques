@@ -4,7 +4,8 @@
   "description": "practice javascript questions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/jscodelover/javacript-practice-ques/issues"
   },
-  "homepage": "https://github.com/jscodelover/javacript-practice-ques#readme"
+  "homepage": "https://github.com/jscodelover/javacript-practice-ques#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
 }
