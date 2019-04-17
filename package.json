@@ -1,0 +1,26 @@
+{
+  "name": "javascript-practice-ques",
+  "version": "1.0.0",
+  "description": "practice javascript questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jscodelover/javacript-practice-ques.git"
+  },
+  "keywords": [
+    "javscript",
+    "question",
+    "testing",
+    "jest",
+    "es6"
+  ],
+  "author": "jscodelover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jscodelover/javacript-practice-ques/issues"
+  },
+  "homepage": "https://github.com/jscodelover/javacript-practice-ques#readme"
+}
