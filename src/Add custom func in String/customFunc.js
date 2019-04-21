@@ -10,6 +10,7 @@
 const str = "manisha";
 
 String.prototype.reverseString = function() {
+  if (this.length < 2) return this;
   let rev = "";
   for (let i = 0; i < this.length; i++) {
     rev = this[i] + rev;
@@ -18,3 +19,5 @@ String.prototype.reverseString = function() {
 };
 
 str.reverseString();
+
+module.exports = String;
