@@ -36,9 +36,31 @@ const twoSum2 = function(nums, target) {
 };
 
 
+/* with O(n) time complexity with object */
+const twoSum3 = function(nums, target) {
+    let obj = {};
+    for(let i=0; i<nums.length ; i++){
+      if(obj[target - nums[i]] !== undefined)
+        return [obj[target - nums[i]] , i];
+      obj[nums[i]] = i;  
+    }
+};
+
+
+/* with O(n) time complexity with map data structure */
+const twoSum4 = function(nums, target) {
+    let map = new Map;
+    for(let i=0; i<nums.length ; i++){
+      if(map.has(target - nums[i]) )
+        return [map.get(target - nums[i]) , i];
+      map.set(nums[i], i);  
+    }
+};
 
 
 module.exports ={
     twoSum1,
     twoSum2,
+    twoSum3,
+    twoSum4
 }
