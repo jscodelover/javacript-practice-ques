@@ -18,6 +18,12 @@ String.prototype.reverseString = function() {
   return rev;
 };
 
-str.reverseString();
+String.prototype.indexOf = function(letter){
+  if(!this.length || !letter) return -1;
+  for(let i=0; i<this.length; i++){
+    if(letter === this[i])
+      return i;
+  }
+}
 
 module.exports = String;
