@@ -44,6 +44,16 @@ class Hash{
           return bucket[i][1];
       }
     }
+    key(){
+        let count = [];
+        for(let i=0; i<this.data.length; i++){
+            if(this.data[i]){
+            for(let j=0; j<this.data[i].length; j++)
+                count.push(this.data[i][j][0])
+            }
+        }
+        return count;
+    }
   }
   
   const newHash = new Hash(10);
