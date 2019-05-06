@@ -27,6 +27,18 @@ class LinkedList {
     ele.next = newEle;
     this.tail = newEle;
   }
+  print() {
+    let ele = this.head;
+    let result = "";
+    while (ele.next) {
+      result += `${ele.value} --> `;
+      ele = ele.next;
+    }
+    result = `${result}${this.tail.value}`;
+    console.log(result);
+  }
 }
 
 const MyLinkedList = new LinkedList(10);
+
+module.exports = MyLinkedList;
