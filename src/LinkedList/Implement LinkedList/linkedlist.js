@@ -35,7 +35,7 @@ class LinkedList {
       ele = ele.next;
     }
     result = `${result}${this.tail.value}`;
-    console.log(result);
+    return result;
   }
 }
 
