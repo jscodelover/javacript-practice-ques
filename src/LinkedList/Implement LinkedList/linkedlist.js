@@ -7,6 +7,13 @@
  * Each node consists of two parts: data & pointer to the next node.
  */
 
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
 class LinkedList {
   constructor(value) {
     this.head = {
@@ -20,10 +27,7 @@ class LinkedList {
     while (ele.next) {
       ele = ele.next;
     }
-    const newEle = {
-      value,
-      next: null
-    };
+    const newEle = new Node(value);
     ele.next = newEle;
     this.tail = newEle;
   }
