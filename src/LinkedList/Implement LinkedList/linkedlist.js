@@ -7,10 +7,14 @@
  * Each node consists of two parts: data & pointer to the next node.
  */
 
+/**
+ * Node class for creating elements in linked list
+ */
+
 class Node {
   constructor(value) {
     this.value = value;
-    this.next = next;
+    this.next = null;
   }
 }
 
@@ -22,15 +26,28 @@ class LinkedList {
     };
     this.tail = this.head;
   }
+
+  /**
+   * append function add element to the end of the linked list.
+   * @param {number} value
+   */
   append(value) {
-    let ele = this.head;
-    while (ele.next) {
-      ele = ele.next;
-    }
     const newEle = new Node(value);
-    ele.next = newEle;
+    this.tail.next = newEle;
     this.tail = newEle;
   }
+
+  /**
+   * prepend function add element to the start of the linked list.
+   * @param {string} value
+   */
+  prepend(value) {
+    let ele = new Node(value);
+    ele.next = this.head;
+    this.head = ele;
+  }
+
+  // print the linked list
   print() {
     let ele = this.head;
     let result = "";
