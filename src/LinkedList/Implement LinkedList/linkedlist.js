@@ -39,12 +39,42 @@ class LinkedList {
 
   /**
    * prepend function add element to the start of the linked list.
-   * @param {string} value
+   * @param {number} value
    */
   prepend(value) {
     let ele = new Node(value);
     ele.next = this.head;
     this.head = ele;
+  }
+
+  /**
+   * insert function add element at the given position in the linked list.
+   * @param {number} pos - position at which we want ti insert a node
+   * @param {number} value
+   */
+  insert(pos, value) {
+    let ele = new Node(value);
+    let i = 1;
+    let list = this.head;
+    while (list.next) {
+      const nextEle = list.next;
+      if (i + 1 === pos) {
+        list.next = ele;
+        ele.next = nextEle;
+        break;
+      }
+      list = list.next;
+      i = i + 1;
+    }
+    if (!list.next) {
+      if (i + 1 === pos) {
+        list.next = ele;
+        ele.next = null;
+        this.tail = ele;
+      } else {
+        console.log("Element can't be added at the given position.");
+      }
+    }
   }
 
   // print the linked list

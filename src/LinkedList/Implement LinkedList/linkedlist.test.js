@@ -11,4 +11,8 @@ describe("Test case for 1 implementation in linked list", () => {
     MyLinkedList.prepend(1);
     expect(MyLinkedList.print()).toBe("1 --> 45 --> 10 --> 5 --> 15");
   });
+  test("insert test case", () => {
+    MyLinkedList.insert(2, 3);
+    expect(MyLinkedList.print()).toBe("1 --> 3 --> 45 --> 10 --> 5 --> 15");
+  });
 });
